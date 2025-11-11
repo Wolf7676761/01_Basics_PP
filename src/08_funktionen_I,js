@@ -1,7 +1,105 @@
 /**** Funktionen 01 *****/
 // 1. Kapselung von Codeblöcken
 
-function test()
-{
-    console.log("Hallo, Kevin!");
+
+
+// Funktionsaufruf | call
+//test();
+
+// Funktionsrumpf | (callee)
+// Funktionsdeklaration
+//function test()
+//{
+  //  console.log("Hallo, Kevin!");
+//}
+
+
+/**** Funktionen 02a  *****/
+// 2a. Parametrisierung + Datenübergabe von INNEN
+
+//call
+//ausgabeNamen();
+
+// Funktion
+// function ausgabeNamen()  {
+
+//   let firstName = "Karsten";
+//   console.log("Hallo " + firstName + "!");
+//}
+
+// console.log(firstName); // Fehler  scope!
+
+//ausgabeNamen2("Kevin");
+
+//function ausgabeNamen2(firstName) { 
+//    console.log("Hallo, " + firstName + "!");
+//}
+
+
+
+//function ausgabeNamen3(firstName, familyName) { 
+//    console.log("Hallo, " + firstName + " " + familyName + "!");
+//}
+
+
+// Argumente werden von prompt() geliefert --> Input
+
+
+/***** Funktionen 03a *****/
+// 03a. Vorbereitung -Trennen der Funktionalitäten
+// Postulat: one function = one job (uncle Bob)
+// SRP single responsibility principle
+
+
+//function ausgabeNamenSRP(firstName, familyName) { 
+//    console.log("Hallo, " + firstName + " " + familyName + "!");
+//}
+
+
+//ausgabeNamenSRP("Max", "Mütze");
+
+//function ausgabeNamenSRP(firstName, familyName) {
+//console.log("Hallo, " + firstName + " " + familyName + "!");
+
+//    const GAP = " ";
+ //   let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
+
+ //   console.log(outputStr);
+//}
+
+//function output(outputStr) {
+  //  console.log(outputStr);
 }
+
+
+/***** Funktionen 03a *****/
+// 03a. Vorbereitung -Trennen der Funktionalitäten
+// Postulat: one function = one job (uncle Bob)
+// SRP single responsibility principle
+
+
+
+//1st responsibility: string composing
+
+//output(getString("Max","Mütze"));
+//output((getString)("Maxine", "Mützerich"));
+//const prompt = require('prompt-sync')({sogjt: true});
+//output(getString(prompt("Vorname?: "),prompt("Name?: ")));
+
+
+//function getString(firstName, familyName) {  
+
+    //1st responsibility: string composing
+   // const GAP = " ";
+  //  let outputStr = "Hallo, " + firstName + GAP + familyName + "!";
+  //  return outputStr;
+
+    //2nd responsibility: string output
+    // console.log(outputStr);
+
+}
+
+
+//function output(outputData) {
+   // console.log(outputData);
+//}
