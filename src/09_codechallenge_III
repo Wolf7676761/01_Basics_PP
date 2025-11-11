@@ -3,6 +3,7 @@
 const prompt = require('prompt-sync')({sigint: true});
 
 let welcome = prompt ("Willkommen bei McDonalds, Ihre Bestellung bitte! ");
+
 let food = prompt ("Hamburger(1), Cheeseburger(2), Chilliburger(3): ");
 let foodName = "";
 
