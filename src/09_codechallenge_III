@@ -1,6 +1,50 @@
-function Willkommen()
-{
- console.log("Willkommen bei McDonalds, Ihre Bestellung bitte!");
-};
-Willkommen();
+// Codechallenge 09
 
+const prompt = require('prompt-sync')({sigint: true});
+
+let welcome = prompt ("Willkommen bei McDonalds, Ihre Bestellung bitte! ");
+let food = prompt ("Hamburger(1), Cheeseburger(2), Chilliburger(3): ");
+let foodName = "";
+
+switch(food) {
+    case "1": 
+    foodName = "Hamburger";
+        break;
+    case "2":
+    foodName = "Cheeseburger";
+        break;
+    case "3": 
+    foodName = "Chilliburger";
+        break;
+    default:
+        console.log("Ungültige Eingabe");
+}
+
+let frage = prompt ("Möchten Sie ein Getränk dazu bestellen? J/N?: ");
+
+let drink;
+let drinkName = "";
+
+
+if (frage == "j") {
+    drink = prompt("Cola(1), Fanta(2), Sprite(3): ");
+}
+switch(drink){
+    case "1":
+    drinkName = "Cola";
+        break;
+    case "2":
+    drinkName = "Fanta";
+        break;
+    case "3":
+    drinkName = "Sprite"
+        break;
+};
+if (frage == "j"){
+console.log(`Hier ist Ihre Bestellung: ${foodName} + ${drinkName}`); // foodName drinkName
+}                                                                    // von ChatGPT
+
+if (frage == "n") {
+    console.log(`Hier ist Ihre Bestellung: ${foodName}`);
+}
+console.log("Vielen Dank und Auf Wiedersehen!");
