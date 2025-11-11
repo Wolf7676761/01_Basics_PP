@@ -69,7 +69,7 @@
 
 //function output(outputStr) {
   //  console.log(outputStr);
-}
+//}
 
 
 /***** Funktionen 03a *****/
@@ -97,7 +97,7 @@
     //2nd responsibility: string output
     // console.log(outputStr);
 
-}
+//}
 
 
 //function output(outputData) {
