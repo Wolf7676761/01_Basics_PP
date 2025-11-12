@@ -40,6 +40,8 @@ switch(drink){
     case "3":
     drinkName = "Sprite"
         break;
+    default:
+        console.log("Ungültige Eingabe");
 };
 if (frage == "j"){
 console.log(`Hier ist Ihre Bestellung: ${foodName} + ${drinkName}`); // foodName drinkName
