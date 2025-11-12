@@ -43,7 +43,6 @@ if (operator == ":")
     output(calculator(zahlEins,zahlZwei,":"));
 
 
-    
 
 
 function add(a,b) {
@@ -51,17 +50,10 @@ function add(a,b) {
 }
 
 
-
-
-
-
-
 // module: addition a + b |  test:
 // output(add(2,2));
 // output(add(2,-2));
 // output(add(2,0));
-
-
 // module: subtraction a - b |  test:
 // output(subtract(3,2));
 // output(subtract(3,-2));
@@ -102,9 +94,6 @@ console.log(outputData);
 
 
 /** WAS soll gemacht werden? */
-
-
-
 // module: calculator | tests:
 // agreement : "+","-","*",":","/"
 //output(calculator(3,2,"+"));
@@ -114,6 +103,7 @@ console.log(outputData);
 //ooutput(calculator(3,2,"/"));
 //ooutput(calculator(3,0,"/"));
 //output(calculator(3,2,"#?!"));
+
 function calculator(a,b,op) {
     switch(op) {
         case "+":
@@ -123,11 +113,11 @@ function calculator(a,b,op) {
         case "*":
         case "x":
             return multiply(a,b);
-            case ":":
-            case "/":
-                return divide(a,b);
-                default:
-                return "Irgendwas ging schief";
+        case ":":
+        case "/":
+            return divide(a,b);
+        default:
+             return "Irgendwas ging schief";
     }
 }
 
