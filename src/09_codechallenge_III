@@ -29,8 +29,7 @@ let drinkName = "";
 
 if (frage == "j") {
     drink = prompt("Cola(1), Fanta(2), Sprite(3): ");
-}
-switch(drink){
+    switch(drink){
     case "1":
     drinkName = "Cola";
         break;
@@ -43,8 +42,13 @@ switch(drink){
     default:
         console.log("Ungültige Eingabe");
 };
+};   
+
 if (frage == "j"){
-console.log(`Hier ist Ihre Bestellung: ${foodName} + ${drinkName}`); // foodName drinkName
+//console.log(`Hier ist Ihre Bestellung: ${foodName} + ${drinkName}`); // foodName drinkName
+console.log("Hier ist Ihre Bestellung: " + foodName + " " + drinkName);
+
+
 }                                                                    // von ChatGPT
 
 if (frage == "n") {
