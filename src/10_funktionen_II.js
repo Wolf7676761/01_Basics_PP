@@ -14,9 +14,40 @@
 //output(add(2,2));
 //output(add(2,-2));
 //output(add(2,0));
-//function add(a,b) {
-//    return a-b; 
-//}
+const prompt = require('prompt-sync')({sigint: true});
+
+let zahlEins = prompt ("Zahl 1: ")
+let operator = prompt ("Auswahl Rechenart: ")
+let zahlZwei = prompt ("Zahl 2: ")
+
+zahlEins = parseInt (zahlEins);
+zahlZwei = parseInt (zahlZwei);
+
+if (operator == "+")
+    output(calculator(zahlEins,zahlZwei,"+"));
+
+if (operator == "-")
+    output(calculator(zahlEins,zahlZwei,"-"));
+
+if (operator == "*")
+    output(calculator(zahlEins,zahlZwei,"*"));
+
+if (operator == "x")
+    output(calculator(zahlEins,zahlZwei,"x"));
+
+if (operator == "/")
+    output(calculator(zahlEins,zahlZwei, "/"));
+
+if (operator == ":")
+    output(calculator(zahlEins,zahlZwei,":"));
+
+
+
+function add(a,b) {
+    return a + b; 
+}
+
+
 
 
 
@@ -33,23 +64,30 @@
 // output(subtract(3,-2));
 // output(subtract(3,0));
 // output(subtract(0,2));
-//function subtract(a,b) {
-//	return a - b;
-//}
+function subtract(a,b) {
+	return a - b;
+}
 
 // module: multiplication a * b |  test:
 // output(multiply(3,2));
 // output(multiply(3,-2));
 // output(multiply(3,0));
-//function multiply(a,b) {
-//	return  a * b;
-//}
+function multiply(a,b) {
+	return  a * b;
+}
+
+function divide(a,b) {
+    if (b == 0){
+        return ERROR_STR_DIV}
+    else {return a / b;}
+    
+}
 
 
 // module: output | test : 
-//function output(outputData) {    
-//console.log(outputData);
-//}
+function output(outputData) {    
+console.log(outputData);
+}
 
 
 const ERROR_STR_DIV = "Teilen durch 0 nicht möglich";
@@ -62,13 +100,13 @@ const ERROR_STR_GEN = "Irgendwas ging schief";
 
 // module: calculator | tests:
 // agreement : "+","-","*",":","/"
-output(calculator(3,2,"+"));
-output(calculator(3,2,"-"));
-output(calculator(3,2,"*"));
-output(calculator(3,2,":"));
-output(calculator(3,2,"/"));
-output(calculator(3,0,"/"));
-output(calculator(3,2,"#?!"));
+//output(calculator(3,2,"+"));
+//ooutput(calculator(3,2,"-"));
+//ooutput(calculator(3,2,"*"));
+//ooutput(calculator(3,2,":"));
+//ooutput(calculator(3,2,"/"));
+//ooutput(calculator(3,0,"/"));
+//output(calculator(3,2,"#?!"));
 function calculator(a,b,op) {
     switch(op) {
         case "+":
@@ -76,12 +114,13 @@ function calculator(a,b,op) {
         case "-":
             return subtract(a,b);
         case "*":
+        case "x":
             return multiply(a,b);
             case ":":
             case "/":
                 return divide(a,b);
-            default:
-                return Error_STR_GEN;
+                default:
+                return ERROR_STR_GEN;
     }
 }
 
