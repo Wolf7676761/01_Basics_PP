@@ -20,6 +20,7 @@ let zahlEins = prompt ("Zahl 1: ")
 let operator = prompt ("Auswahl Rechenart: ")
 let zahlZwei = prompt ("Zahl 2: ")
 
+
 zahlEins = parseInt (zahlEins);
 zahlZwei = parseInt (zahlZwei);
 
@@ -41,6 +42,8 @@ if (operator == "/")
 if (operator == ":")
     output(calculator(zahlEins,zahlZwei,":"));
 
+
+    
 
 
 function add(a,b) {
@@ -76,10 +79,16 @@ function multiply(a,b) {
 	return  a * b;
 }
 
+// const ERROR_STR_GEN = "Irgendwas ging schief";
+//const ERROR_STR_DIV = "Teilen durch 0 nicht möglich";
+
 function divide(a,b) {
     if (b == 0){
-        return ERROR_STR_DIV}
-    else {return a / b;}
+        return "Teilen durch 0 nicht möglich";
+    }else {
+        return a / b;
+
+    }
     
 }
 
@@ -90,8 +99,6 @@ console.log(outputData);
 }
 
 
-const ERROR_STR_DIV = "Teilen durch 0 nicht möglich";
-const ERROR_STR_GEN = "Irgendwas ging schief";
 
 
 /** WAS soll gemacht werden? */
@@ -120,7 +127,7 @@ function calculator(a,b,op) {
             case "/":
                 return divide(a,b);
                 default:
-                return ERROR_STR_GEN;
+                return "Irgendwas ging schief";
     }
 }
 
