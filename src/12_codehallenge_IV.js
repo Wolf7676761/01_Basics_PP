@@ -26,15 +26,20 @@ function getSentence(arr,op) {
     else if (op === "E") punct = "!";
 
     let str = "";
-    for (let i = 0; i < arr.length; i++) {
-        str += arr[i];
-        if (i < arr.length - 1) str += GAP;
+    for (let i = 0; i < arr.length; i++) {    //for (let i = 0; i < arr.length; i++) {
+        str += arr[i];                        //str += arr[i] -->>>(+ PUNCT;)<<<--  
+        if (i < arr.length - 1)               //if (i != arr.length - 1) 
+            str += GAP;                       //str += arr[i] + GAP;
     }
 
-    return str + punct;
+    return str + punct;                       //return str + PUNCT;  
 }
 
-
+//// -->>> Änderung<<<--
+// Satzzeichen (punct) wird nicht mehr
+// in der Schleife nach jedem Wort angehängt,
+// sondern erst nach der Schleife einmal am Satzende.
+// So steht das Satzzeichen nur einmal am Ende.
 
 
 // Modul: Ausgabe in Konsole : Test
@@ -42,3 +47,6 @@ function getSentence(arr,op) {
 function output(outputData) {
     console.log(outputData);
 }
+
+
+
