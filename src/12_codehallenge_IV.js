@@ -20,7 +20,7 @@ output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwo
 
 function getSentence(arr,op) {
     const GAP = " ";
-    let punct = ".";
+    let punct = ".";        // const steht für Konstante und darf nicht verändert werden darum wird die Variable let verwendet
 
     if (op === "Q") punct = "?";
     else if (op === "E") punct = "!";
