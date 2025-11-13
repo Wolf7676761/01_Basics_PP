@@ -24,7 +24,7 @@ let zahlZwei = prompt ("Zahl 2: ")
 zahlEins = parseInt (zahlEins);
 zahlZwei = parseInt (zahlZwei);
 
-if (operator == "+")
+/* if (operator == "+")
     output(calculator(zahlEins,zahlZwei,"+"));
 
 if (operator == "-")
@@ -41,9 +41,9 @@ if (operator == "/")
 
 if (operator == ":")
     output(calculator(zahlEins,zahlZwei,":"));
+ */
 
-
-
+output(calculator(zahlEins,zahlZwei,operator));
 
 function add(a,b) {
     return a + b; 
